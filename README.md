@@ -1,8 +1,8 @@
 [![MasterHead](https://developers.giphy.com/branch/master/static/api-512d36c09662682717108a38bbb5c57d.gif)](https://github.com/miraclemenikelechi)
 
 <h1 align="center">Hi 👋, I'm Miracle K</h1>
-<h3 align="center">A enthusiastic software developer from Nigeria</h3>
-<img align="center" alt="javascript" width="70%" src="https://miro.medium.com/max/1400/1*OF0xEMkWBv-69zvmNs6RDQ.gif">
+<h3 align="center">An enthusiastic software developer from Nigeria</h3>
+<img align="center" alt="javascript" width="100%" src="https://miro.medium.com/max/1400/1*OF0xEMkWBv-69zvmNs6RDQ.gif">
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=miraclemenikelechi&label=Profile%20views&color=0e75b6&style=flat" alt="miraclemenikelechi" /> </p>
 
