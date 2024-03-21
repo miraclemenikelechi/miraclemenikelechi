@@ -9,7 +9,7 @@
 
 - 👯 I’m looking to collaborate on **open source backend projects**
 
-- 🤝 I’m looking for help with **Javascript**
+- 🤝 I’m looking for help with **Javascript, Python**
 
 - 💬 Ask me about **react, scss, typescript, less, css**
 
