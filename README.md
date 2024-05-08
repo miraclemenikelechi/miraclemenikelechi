@@ -1,6 +1,3 @@
-<h1 align="center">Hi 👋, I'm Miracle K Emenike</h1>
-<h3 align="center">A passionate software developer from West Africa.</h3>
-
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=miraclemenikelechi" alt="miraclemenikelechi" /></a> </p>
 
 <p align="left"> <a href="https://twitter.com/trinityandtruth" target="blank"><img src="https://img.shields.io/twitter/follow/trinityandtruth?logo=twitter&style=for-the-badge" alt="trinityandtruth" /></a> </p>
