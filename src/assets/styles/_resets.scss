@@ -1,0 +1,6 @@
+@use "mixins"as *;
+
+i {
+    @include equal(100%);
+    @include flex;
+}

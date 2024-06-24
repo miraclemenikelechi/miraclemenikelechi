@@ -1,4 +1,4 @@
-// import { AlignRight } from "lucide-react";
+import { AlignRight, X } from "lucide-react";
 import React from "react";
 import "@styles/_nav-menu-button.scss";
 
@@ -12,18 +12,18 @@ export default function NavMenuButton() {
 	}
 
 	return (
-		<section className="flex items-center justify-center border size-64">
+		<section className="flex items-center justify-center border">
 			<button
 				onClick={handleClick}
-				// className="bg-red-500"
-				id="nav-menu-button"
+				className={`relative size-16 nav-menu-button--${
+					isOpen ? "open" : "close"
+				}`}
+				id={`nav-menu-button`}
 			>
-				<span
-					className="flex items-center justify-center size-10"
-					id=""
-				>
-					{/* <AlignRight /> */}
-					{isOpen ? "open" : "close"}
+				<span className="flex items-center justify-center size-10">
+					<i className="text-white">
+						{isOpen ? <X size={32} /> : <AlignRight size={32} />}
+					</i>
 				</span>
 			</button>
 		</section>

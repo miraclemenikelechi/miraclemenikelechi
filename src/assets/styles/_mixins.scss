@@ -1,1 +1,11 @@
-$pink: #ff0080;
+@mixin flex($d: row, $j: center, $a: center) {
+    display: flex;
+    flex-direction: $d;
+    justify-content: $j;
+    align-items: $a;
+}
+
+@mixin equal($h-w) {
+    height: $h-w;
+    width: $h-w;
+}
