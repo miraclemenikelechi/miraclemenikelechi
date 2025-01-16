@@ -3,15 +3,18 @@
 $element: nav-menu-button;
 
 ##{$element} {
+    --duration: 150ms;
+
     overflow: hidden;
     @include flex;
 
     &::before {
         content: "";
         position: absolute;
-        transition: all 150ms ease-in-out;
-        background: rgba($color: #283739, $alpha: 1);
-
+        transition-property: top, border;
+        transition-duration: var(--duration);
+        transition-timing-function: ease-out;
+        background: rgba($color: #5f002f, $alpha: .25);
         @include equal(100%);
     }
 
@@ -26,7 +29,7 @@ $element: nav-menu-button;
 
     i>svg {
         animation-name: bounceIn;
-        animation-duration: 150ms;
+        animation-duration: var(--duration);
         animation-iteration-count: 1;
         animation-timing-function: ease-in-out;
         z-index: 5;
