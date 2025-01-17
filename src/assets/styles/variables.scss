@@ -1,0 +1,11 @@
+// this mixin will generate css variables from scss variables
+// see "mixins.scss/generate-css-vars" for definition
+@mixin generate-css-variables($map: null, $prefix: null) {
+    @each $key, $value in $map {
+        @if $prefix {
+            --#{$prefix}-#{$key}: #{$value};
+        } @else {
+            --#{$key}: #{$value};
+        }
+    }
+}

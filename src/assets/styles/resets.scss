@@ -1,4 +1,8 @@
-@use "mixins"as *;
+@use "mixins" as *;
+
+body {
+    background-color: black;
+}
 
 i {
     @include equal(100%);

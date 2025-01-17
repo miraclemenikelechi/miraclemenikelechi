@@ -1,14 +1,9 @@
-import { useBreakpoint } from "../hooks/use-breakpoint";
-import { cn } from "../lib/utils";
+import RenderUsername from "../components/nav-bar-username";
 
 export default function Component() {
-	const isMobile = useBreakpoint({ bp: "mobile", type: "max" });
-
 	return (
-		<section className="flex items-center justify-center border-b border-b-zinc-900">
-			<h1 className={cn("font-bold py-4", isMobile ? "text-3xl" : "text-6xl")}>
-				miraclemenikelechi
-			</h1>
+		<section className="flex items-center justify-center mx-auto max-w-screen-2xl">
+			<RenderUsername />
 		</section>
 	);
 }

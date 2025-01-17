@@ -7,6 +7,9 @@ export default {
 				"purple--100": "#fae8ff",
 			},
 		},
+		fontFamily: {
+			"space-mono": ["Space Mono", "serif"],
+		},
 	},
 	plugins: [],
 };

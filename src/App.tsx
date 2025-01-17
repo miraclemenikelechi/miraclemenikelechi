@@ -5,10 +5,10 @@ import Showcase from "./views/showcase";
 export default function App() {
 	return (
 		<section
-			className="min-h-screen bg-black text-purple--100"
+			className="relative min-h-screen mx-auto text-purple--100 font-space-mono"
 			id="app"
 		>
-			<header>
+			<header className="sticky top-0 bg-black border-b border-b-zinc-900">
 				<NavigationBar />
 			</header>
 
