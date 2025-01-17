@@ -1,12 +1,22 @@
-import IntroText from "./components/ui/intro-text";
-import NavMenuButton from "./components/ui/nav-menu-button";
+import "@styles/app.scss";
+import NavigationBar from "./views/navigation-bar";
+import Showcase from "./views/showcase";
 
 export default function App() {
 	return (
-		<div className="flex items-center justify-center min-h-screen bg-black text-purple--100 App">
-			<header>hello world</header>
-			<NavMenuButton />
-			<IntroText />
-		</div>
+		<section
+			className="min-h-screen bg-black text-purple--100"
+			id="app"
+		>
+			<header>
+				<NavigationBar />
+			</header>
+
+			<main hidden>todo later</main>
+
+			<footer>
+				<Showcase />
+			</footer>
+		</section>
 	);
 }
