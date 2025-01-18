@@ -28,7 +28,7 @@ export default function Page() {
 		// </section>
 
 		<section
-			className="h-screen text-pink--100 font-space-mono"
+			className="min-h-screen text-pink--100 font-space-mono"
 			id="desktop"
 		>
 			<div className="mx-auto max-w-screen-2xl">
