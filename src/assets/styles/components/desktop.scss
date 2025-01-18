@@ -3,34 +3,6 @@
 
 $element: desktop;
 
-// ##{$element} {
-//     display: grid;
-//     grid-template-columns: repeat(2, 1fr);
-//     // grid-template-rows: 6.25rem 1fr;
-//     height: 100%;
-//     overflow: scroll;
-
-//     > aside {
-//         // height: 500px;
-
-//         &:first-of-type {
-//             border: 1px solid red;
-//             position: sticky;
-//             top: 0;
-//         }
-
-//         &:last-of-type {
-//             // overflow-y: scroll;
-//             background-color: transparent;
-//             border: 1px solid yellow;
-//         }
-//     }
-
-//     &::-webkit-scrollbar {
-//         display: none;
-//     }
-// }
-
 ##{$element} header {
     aside {
         &:last-of-type {

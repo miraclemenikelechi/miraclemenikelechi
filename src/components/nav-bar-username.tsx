@@ -1,10 +1,8 @@
 import React from "react";
-import { useBreakpoint } from "../hooks/use-breakpoint";
 import { ALPHABETS } from "../lib/constants";
 import { cn } from "../lib/utils";
 
 export default function Component() {
-	const isMobile = useBreakpoint({ bp: "mobile", type: "max" });
 	const usernameRef = React.useRef<HTMLHeadingElement | null>(null);
 
 	React.useLayoutEffect(function () {
