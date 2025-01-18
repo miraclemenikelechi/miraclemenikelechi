@@ -1,9 +1,13 @@
+import gsap from "gsap";
+import { ScrollTrigger, TextPlugin } from "gsap/all";
 import Lenis from "lenis";
 import React from "react";
-import { useBreakpoint } from "./hooks/use-breakpoint";
 
+import { useBreakpoint } from "./hooks/use-breakpoint";
 const DesktopView = React.lazy(() => import("./views/desktop"));
 const MobileView = React.lazy(() => import("./views/mobile"));
+
+gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 export default function AWOLOWO() {
 	React.useEffect(function () {
@@ -14,6 +18,13 @@ export default function AWOLOWO() {
 			requestAnimationFrame(raf);
 		}
 		requestAnimationFrame(raf);
+
+		lenis.on("scroll", ScrollTrigger.update);
+
+		return function () {
+			lenis.destroy();
+			ScrollTrigger.killAll();
+		};
 	}, []);
 
 	const fallback = (
