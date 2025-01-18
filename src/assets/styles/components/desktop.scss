@@ -31,9 +31,6 @@ $element: desktop;
 //     }
 // }
 
-##{$element} {
-}
-
 ##{$element} header {
     aside {
         &:last-of-type {
