@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 export default function AWOLOWO() {
 	React.useEffect(function () {
-		const lenis = new Lenis();
+		const lenis = new Lenis({ lerp: 0.05, smoothWheel: true });
 
 		function raf(time: number) {
 			lenis.raf(time);
@@ -20,6 +20,11 @@ export default function AWOLOWO() {
 		requestAnimationFrame(raf);
 
 		lenis.on("scroll", ScrollTrigger.update);
+
+		gsap.ticker.add((time) => {
+			lenis.raf(time * 1000);
+		});
+		gsap.ticker.lagSmoothing(0);
 
 		return function () {
 			lenis.destroy();

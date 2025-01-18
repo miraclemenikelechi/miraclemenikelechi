@@ -28,7 +28,8 @@ export default function Component({ type }: RenderServicesProps) {
 
 			<Accordion
 				type="single"
-				collapsible
+				collapsible={false}
+				defaultValue="item-0"
 			>
 				{services.map((value: Service, index: number) => (
 					<AccordionItem
@@ -36,10 +37,12 @@ export default function Component({ type }: RenderServicesProps) {
 						value={`item-${index}`}
 						className="py-5"
 					>
-						<AccordionTrigger className="outline-none hover:no-underline">
+						<AccordionTrigger className="capitalize outline-none hover:no-underline">
 							{value.title}
 						</AccordionTrigger>
-						<AccordionContent>{value.description}</AccordionContent>
+						<AccordionContent className="text-lg lowercase">
+							{value.description}
+						</AccordionContent>
 					</AccordionItem>
 				))}
 			</Accordion>

@@ -9,41 +9,25 @@ import DesktopNav from "./desktop-navbar";
 export default function Page() {
 	const backendRef = React.useRef<HTMLElement | null>(null);
 	const frontendRef = React.useRef<HTMLElement | null>(null);
-	const textRef = React.useRef<HTMLHeadingElement | null>(null);
+	const textRef = React.useRef<HTMLElement | null>(null);
 
 	React.useEffect(function () {
 		gsap.timeline({
 			scrollTrigger: {
 				trigger: frontendRef.current,
 				start: "top center",
-				end: "bottom center",
-				onEnter: () => {
-					if (textRef.current)
-						gsap.to(textRef.current, { text: "Frontend", duration: 0.5 });
-				},
-
-				onLeaveBack: () => {
-					if (textRef.current)
-						gsap.to(textRef.current, { text: "Frontend", duration: 0.5 });
-				},
+				end: "bottom 60%",
+				toggleActions: "play reverse play reverse",
 			},
-		});
+		}).to(textRef.current, { text: "front", duration: 0.5, ease: "power2.out" });
 
 		gsap.timeline({
 			scrollTrigger: {
 				trigger: backendRef.current,
-				start: "top center",
-				end: "bottom center",
-				onEnter: () => {
-					if (textRef.current)
-						gsap.to(textRef.current, { text: "Backend", duration: 0.5 });
-				},
-				onLeaveBack: () => {
-					if (textRef.current)
-						gsap.to(textRef.current, { text: "Backend", duration: 0.5 });
-				},
+				start: "top 60%",
+				toggleActions: "play reverse play reverse",
 			},
-		});
+		}).to(textRef.current, { text: "back", duration: 0.5, ease: "power2.in" });
 	}, []);
 
 	return (
@@ -56,7 +40,11 @@ export default function Page() {
 
 				<main className="relative grid grid-cols-2">
 					<aside className="sticky top-[6.75rem] p-10 h-max">
-						<h1 ref={textRef}>frontend</h1>
+						<h1 className="font-black uppercase text-[10rem] leading-[8rem] text-muted-foreground">
+							<span ref={textRef}>front</span>
+							<br />
+							<span>end</span>
+						</h1>
 					</aside>
 
 					<aside className="max-h-max p-10 space-y-[10rem]">
