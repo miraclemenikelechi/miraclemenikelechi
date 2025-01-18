@@ -1,26 +1,27 @@
 import React from "react";
+import { BreakpointKey, BreakpointType } from "../types";
 
-import { BreakpointContext } from "../contexts/breakpoints";
+export const BreakpointContext = React.createContext({
+	mobile: 640,
+	tablet: 1024,
+});
 
 function Breakpoints() {
 	return React.useContext(BreakpointContext);
 }
 
-type BreakpointKeys = "mobile" | "tablet";
+interface useBreakpointProps {
+	bp: BreakpointKey | number;
+	type: BreakpointType;
+}
 
-export function useBreakpoint({
-	bp,
-	type,
-}: {
-	bp: BreakpointKeys | number;
-	type: "min" | "max";
-}) {
+export function useBreakpoint({ bp, type }: useBreakpointProps) {
 	const breakPoints = Breakpoints();
 
 	const isCustomBreakpoint = typeof bp === "number";
 	const breakPointValue = isCustomBreakpoint ? bp : breakPoints[bp];
 
-	const [isMatched, setIsMatched] = React.useState(false);
+	const [isMatched, setIsMatched] = React.useState<boolean>(false);
 
 	React.useEffect(
 		function () {

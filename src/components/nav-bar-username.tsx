@@ -41,9 +41,12 @@ export default function Component() {
 	return (
 		<>
 			<h1
-				className={cn("font-bold py-4", isMobile ? "text-3xl" : "text-6xl")}
+				className={cn("font-bold py-4")}
 				data-username="miraclemenikelechi"
 				ref={usernameRef}
+				style={{
+					fontSize: `clamp(0.25rem, 6vw, 3rem)`,
+				}}
 			>
 				miraclemenikelechi
 			</h1>

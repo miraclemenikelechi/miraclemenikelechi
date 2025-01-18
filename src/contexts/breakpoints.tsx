@@ -1,9 +1,5 @@
 import React from "react";
-
-export const BreakpointContext = React.createContext({
-	mobile: 640,
-	tablet: 1024,
-});
+import { BreakpointContext } from "../hooks/use-breakpoint";
 
 export function BreakpointProvider({ children }: { children: React.ReactNode }) {
 	return (

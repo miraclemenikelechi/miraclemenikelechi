@@ -2,6 +2,7 @@
 @use "tailwindcss/components";
 @use "tailwindcss/utilities";
 
-@forward "mixins";
 @forward "animations";
+@forward "mixins";
 @forward "resets";
+@forward "variables.scss";

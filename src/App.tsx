@@ -1,22 +1,17 @@
-import "@styles/app.scss";
-import NavigationBar from "./views/navigation-bar";
-import Showcase from "./views/showcase";
+import React from "react";
+import { useBreakpoint } from "./hooks/use-breakpoint";
 
-export default function App() {
+const DesktopView = React.lazy(() => import("./views/desktop"));
+const MobileView = React.lazy(() => import("./views/mobile"));
+
+export default function AWOLOWO() {
 	return (
-		<section
-			className="relative min-h-screen mx-auto text-purple--100 font-space-mono"
-			id="app"
-		>
-			<header className="sticky top-0 bg-black border-b border-b-zinc-900">
-				<NavigationBar />
-			</header>
-
-			<main hidden>todo later</main>
-
-			<footer>
-				<Showcase />
-			</footer>
-		</section>
+		<React.Suspense fallback={<div>Loading...</div>}>
+			{useBreakpoint({ bp: "tablet", type: "max" }) ? (
+				<MobileView />
+			) : (
+				<DesktopView />
+			)}
+		</React.Suspense>
 	);
 }

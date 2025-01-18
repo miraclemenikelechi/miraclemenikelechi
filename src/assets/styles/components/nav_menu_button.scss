@@ -1,4 +1,4 @@
-@use "../index.scss"as *;
+@use "../index.scss" as *;
 
 $element: nav-menu-button;
 
@@ -14,20 +14,20 @@ $element: nav-menu-button;
         transition-property: top, border;
         transition-duration: var(--duration);
         transition-timing-function: ease-out;
-        background: rgba($color: #5f002f, $alpha: .25);
+        background: rgba($color: #5f002f, $alpha: 0.25);
         @include equal(100%);
     }
 
     &.#{$element}--close::before {
-        top: calc(100% - .0625rem);
+        top: calc(100% - 0.0625rem);
     }
 
     &.#{$element}--open::before {
         top: 0;
-        border-radius: .25rem;
+        border-radius: 0.25rem;
     }
 
-    i>svg {
+    i > svg {
         animation-name: bounceIn;
         animation-duration: var(--duration);
         animation-iteration-count: 1;
