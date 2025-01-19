@@ -1,3 +1,5 @@
+import { CSS3, HTML5, JAVASCRIPT, LESS, NEXT, REACT, SCSS, TAILWIND } from "../icons";
+
 export const SERVICES = {
 	FRONTEND: [
 		{
@@ -134,4 +136,9 @@ export const SERVICES = {
 			adipisci fugiat! Eum, molestiae non.`,
 		},
 	],
+
+	ICONS: {
+		FRONTEND: [HTML5, CSS3, SCSS, TAILWIND, JAVASCRIPT, LESS, REACT, NEXT],
+		BACKEND: [],
+	},
 };

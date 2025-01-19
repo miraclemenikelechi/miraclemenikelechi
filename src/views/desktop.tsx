@@ -5,7 +5,8 @@ import React from "react";
 
 import Services from "@/components/service";
 import DesktopNav from "./desktop-navbar";
-import { HTML } from "@/assets/icons";
+import { HTML5 } from "@/assets/icons";
+import { SERVICES } from "@/assets/data/service";
 
 export default function Page() {
 	const backendIconsRef = React.useRef<HTMLDivElement | null>(null);
@@ -24,8 +25,7 @@ export default function Page() {
 		)
 			return;
 
-		// Frontend text animation
-		const frontendTextTimeline = gsap.timeline({
+		const frontendTimeline = gsap.timeline({
 			scrollTrigger: {
 				trigger: frontendRef.current,
 				start: "top center",
@@ -33,60 +33,52 @@ export default function Page() {
 				toggleActions: "play reverse play reverse",
 			},
 		});
-		frontendTextTimeline.to(textRef.current, {
-			text: "front",
-			duration: 0.5,
-			ease: "power2.out",
-		});
-
-		// Frontend icons animation
-		const frontendIconsTimeline = gsap.timeline({
-			scrollTrigger: {
-				trigger: frontendRef.current,
-				start: "top center",
-				end: "bottom 60%",
-				toggleActions: "play reverse play reverse",
-			},
-		});
-		frontendIconsTimeline.fromTo(
+		frontendTimeline.fromTo(
 			frontendIconsRef.current.children,
-			{ opacity: 0, x: -50 },
-			{ opacity: 1, x: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.05 },
-		);
-
-		// Backend text animation
-		const backendTextTimeline = gsap.timeline({
-			scrollTrigger: {
-				trigger: backendRef.current,
-				start: "top 60%",
-				toggleActions: "play reverse play reverse",
+			{
+				opacity: 0,
+				y: -50,
 			},
-		});
-		backendTextTimeline.to(textRef.current, {
-			text: "back",
-			duration: 0.5,
-			ease: "power2.in",
-		});
-
-		// Backend icons animation
-		const backendIconsTimeline = gsap.timeline({
-			scrollTrigger: {
-				trigger: backendRef.current,
-				start: "top 60%",
-				toggleActions: "play reverse play reverse",
-			},
-		});
-		backendIconsTimeline.fromTo(
-			backendIconsRef.current.children,
-			{ opacity: 0, x: 50 },
 			{
 				opacity: 1,
-				x: 0,
-				duration: 0.5,
-				ease: "power3.inOut",
-				stagger: 0.05,
+				y: 0,
+				duration: 0.25,
+				ease: "power3.out",
 			},
 		);
+
+		const backendTimeline = gsap.timeline({
+			scrollTrigger: {
+				trigger: backendRef.current,
+				start: "top 60%",
+				toggleActions: "play reverse play reverse",
+			},
+		});
+		backendTimeline
+			.fromTo(
+				textRef.current,
+				{
+					text: "front",
+				},
+				{
+					text: "back",
+					ease: "power2.out",
+				},
+			)
+			.fromTo(
+				backendIconsRef.current.children,
+				{
+					opacity: 0,
+					y: 50,
+				},
+				{
+					opacity: 1,
+					y: 0,
+					duration: 0.25,
+					ease: "power3.out",
+				},
+				"-=0.25",
+			);
 	}, []);
 
 	return (
@@ -100,7 +92,7 @@ export default function Page() {
 				<main className="relative grid grid-cols-2">
 					<aside className="sticky top-[6.75rem] p-10 h-max space-y-40">
 						<h1 className="font-black uppercase text-[10rem] leading-[8rem] text-muted-foreground">
-							<span ref={textRef}>front</span>
+							<span ref={textRef} />
 							<br />
 							<span>end</span>
 						</h1>
@@ -108,29 +100,31 @@ export default function Page() {
 						<section className="relative">
 							<div
 								ref={frontendIconsRef}
-								className="absolute flex w-full"
+								className="absolute grid w-full grid-cols-8 gap-2"
 							>
-								{[...Array(5)].map((_, index) => (
-									<i
-										className="size-20"
+								{SERVICES.ICONS.FRONTEND.map((value, index) => (
+									<span
+										className="p-2.5 rounded-lg size-20 bg-zinc-900"
 										key={index}
 									>
-										<HTML />
-									</i>
+										<i>{value()}</i>
+									</span>
 								))}
 							</div>
 
 							<div
 								ref={backendIconsRef}
-								className="absolute flex w-full border"
+								className="absolute grid w-full grid-cols-8 gap-2"
 							>
 								{[...Array(5)].map((_, index) => (
-									<i
-										className="size-20"
+									<span
+										className="p-2.5 rounded-lg size-20 bg-zinc-900"
 										key={index}
 									>
-										<HTML />
-									</i>
+										<i>
+											<HTML5 />
+										</i>
+									</span>
 								))}
 							</div>
 						</section>
