@@ -75,69 +75,43 @@ export const SERVICES = {
 
 	BACKEND: [
 		{
-			title: "backend structures",
-			description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum omnis
-			totam quisquam sint quia harum eaque optio facere aliquid maiores consectetur
-			dignissimos magnam quae, alias eum quas explicabo ex doloribus. Nemo aliquam
-			non nihil ullam sint deleniti natus libero molestias ratione fugit, eligendi
-			laborum explicabo itaque veniam voluptatem eaque vero tenetur voluptatum est
-			aperiam omnis beatae cumque officia! Obcaecati pariatur nostrum numquam
-			officiis a laborum, veniam quo placeat itaque esse doloremque fugit architecto
-			ipsum minima blanditiis, aperiam amet libero! Rem velit quibusdam unde, amet
-			ex voluptatem quidem est, assumenda debitis aspernatur animi a! Rem mollitia
-			adipisci fugiat! Eum, molestiae non.`,
+			title: "Supercharged APIs",
+			description: `I build APIs that don't just work—they <strong>fly</strong>. Whether it’s RESTful or
+            GraphQL, I craft smooth, efficient, and lightning-fast APIs that connect your frontend
+            seamlessly. These aren’t just any APIs—they’re optimized for performance, built with
+            scalability in mind, and packed with security. Get ready for an API that can handle
+            whatever you throw at it, with zero headaches.`,
 		},
 		{
-			title: "backend structures",
-			description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum omnis
-			totam quisquam sint quia harum eaque optio facere aliquid maiores consectetur
-			dignissimos magnam quae, alias eum quas explicabo ex doloribus. Nemo aliquam
-			non nihil ullam sint deleniti natus libero molestias ratione fugit, eligendi
-			laborum explicabo itaque veniam voluptatem eaque vero tenetur voluptatum est
-			aperiam omnis beatae cumque officia! Obcaecati pariatur nostrum numquam
-			officiis a laborum, veniam quo placeat itaque esse doloremque fugit architecto
-			ipsum minima blanditiis, aperiam amet libero! Rem velit quibusdam unde, amet
-			ex voluptatem quidem est, assumenda debitis aspernatur animi a! Rem mollitia
-			adipisci fugiat! Eum, molestiae non.`,
+			title: "Next-Level Databases",
+			description: `Databases are the backbone of any great app, and I make sure yours are rock-solid. I
+            design and fine-tune databases (SQL or NoSQL, your choice) to be as fast as a cheetah
+            and as reliable as your morning coffee. From optimizing queries to creating scalable
+            schemas, I ensure your data is organized, secure, and ready to handle high traffic
+            with ease.`,
 		},
 		{
-			title: "backend structures",
-			description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum omnis
-			totam quisquam sint quia harum eaque optio facere aliquid maiores consectetur
-			dignissimos magnam quae, alias eum quas explicabo ex doloribus. Nemo aliquam
-			non nihil ullam sint deleniti natus libero molestias ratione fugit, eligendi
-			laborum explicabo itaque veniam voluptatem eaque vero tenetur voluptatum est
-			aperiam omnis beatae cumque officia! Obcaecati pariatur nostrum numquam
-			officiis a laborum, veniam quo placeat itaque esse doloremque fugit architecto
-			ipsum minima blanditiis, aperiam amet libero! Rem velit quibusdam unde, amet
-			ex voluptatem quidem est, assumenda debitis aspernatur animi a! Rem mollitia
-			adipisci fugiat! Eum, molestiae non.`,
+			title: "Bulletproof Authentication",
+			description: `Protecting your users is priority number one. I set up authentication systems that
+            make security a breeze. Whether it’s OAuth, JWT, or custom solutions, I ensure your
+            users are locked in safely without the hassle. From easy logins to secure sessions, I
+            make sure access is as seamless as it is secure.`,
 		},
 		{
-			title: "backend structures",
-			description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum omnis
-			totam quisquam sint quia harum eaque optio facere aliquid maiores consectetur
-			dignissimos magnam quae, alias eum quas explicabo ex doloribus. Nemo aliquam
-			non nihil ullam sint deleniti natus libero molestias ratione fugit, eligendi
-			laborum explicabo itaque veniam voluptatem eaque vero tenetur voluptatum est
-			aperiam omnis beatae cumque officia! Obcaecati pariatur nostrum numquam
-			officiis a laborum, veniam quo placeat itaque esse doloremque fugit architecto
-			ipsum minima blanditiis, aperiam amet libero! Rem velit quibusdam unde, amet
-			ex voluptatem quidem est, assumenda debitis aspernatur animi a! Rem mollitia
-			adipisci fugiat! Eum, molestiae non.`,
+			title: "Cloud Powerhouse",
+			description: `Forget about server headaches. With my cloud expertise, I deploy your backend straight
+            into the cloud—<strong>AWS</strong>, <strong>Google Cloud</strong>,
+            <strong>Azure</strong>—you name it. From auto-scaling to high-availability, I’ll make
+            sure your app can handle traffic spikes without breaking a sweat. Plus, I automate the
+            deployment process so updates are smooth and worry-free.`,
 		},
 		{
-			title: "backend structures",
-			description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum omnis
-			totam quisquam sint quia harum eaque optio facere aliquid maiores consectetur
-			dignissimos magnam quae, alias eum quas explicabo ex doloribus. Nemo aliquam
-			non nihil ullam sint deleniti natus libero molestias ratione fugit, eligendi
-			laborum explicabo itaque veniam voluptatem eaque vero tenetur voluptatum est
-			aperiam omnis beatae cumque officia! Obcaecati pariatur nostrum numquam
-			officiis a laborum, veniam quo placeat itaque esse doloremque fugit architecto
-			ipsum minima blanditiis, aperiam amet libero! Rem velit quibusdam unde, amet
-			ex voluptatem quidem est, assumenda debitis aspernatur animi a! Rem mollitia
-			adipisci fugiat! Eum, molestiae non.`,
+			title: "Serverless Magic",
+			description: `	Who needs servers? I bring you <strong>serverless architecture</strong> that scales
+            with your app without the overhead. Using services like AWS Lambda and Azure
+            Functions, I build backend systems that only run when needed, cutting costs and
+            improving performance at the same time. Your app becomes faster, cheaper, and more
+            efficient—what’s not to love?`,
 		},
 	],
 
