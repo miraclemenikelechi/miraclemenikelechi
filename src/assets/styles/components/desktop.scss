@@ -4,6 +4,8 @@
 $element: desktop;
 
 ##{$element} header {
+    z-index: 5;
+
     aside {
         &:last-of-type {
             position: relative;
@@ -17,6 +19,7 @@ $element: desktop;
                 left: 0;
                 position: absolute;
                 width: 100%;
+                opacity: 0.5;
             }
         }
     }

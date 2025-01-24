@@ -3,10 +3,9 @@ import "@styles/desktop.scss";
 import gsap from "gsap";
 import React from "react";
 
+import { SERVICES } from "@/assets/data/service";
 import Services from "@/components/service";
 import DesktopNav from "./desktop-navbar";
-import { HTML5 } from "@/assets/icons";
-import { SERVICES } from "@/assets/data/service";
 
 export default function Page() {
 	const backendIconsRef = React.useRef<HTMLDivElement | null>(null);
@@ -51,6 +50,7 @@ export default function Page() {
 			scrollTrigger: {
 				trigger: backendRef.current,
 				start: "top 60%",
+				end: "bottom center",
 				toggleActions: "play reverse play reverse",
 			},
 		});
@@ -100,7 +100,7 @@ export default function Page() {
 						<section className="relative">
 							<div
 								ref={frontendIconsRef}
-								className="absolute grid w-full grid-cols-8 gap-2"
+								className="absolute grid w-full grid-cols-5 gap-10 place-items-center"
 							>
 								{SERVICES.ICONS.FRONTEND.map((value, index) => (
 									<span
@@ -114,16 +114,14 @@ export default function Page() {
 
 							<div
 								ref={backendIconsRef}
-								className="absolute grid w-full grid-cols-8 gap-2"
+								className="absolute grid w-full grid-cols-5 gap-10 place-items-center"
 							>
-								{[...Array(5)].map((_, index) => (
+								{SERVICES.ICONS.BACKEND.map((value, index) => (
 									<span
 										className="p-2.5 rounded-lg size-20 bg-zinc-900"
 										key={index}
 									>
-										<i>
-											<HTML5 />
-										</i>
+										<i>{value()}</i>
 									</span>
 								))}
 							</div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { SERVICES } from "@/assets/data/service";
 import {
@@ -8,12 +8,14 @@ import {
 	AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Service } from "@/types";
+import { cn } from "@/lib/utils";
 
 interface RenderServicesProps {
 	type: "frontend" | "backend";
 }
 
 export default function Component({ type }: RenderServicesProps) {
+	const [isAccordionOpen, setIsAccordionOpen] = useState<string>("item-0");
 	const services = type === "frontend" ? SERVICES.FRONTEND : SERVICES.BACKEND;
 
 	const displayTitle = { frontend: "front end", backend: "back end" }[type];
@@ -29,22 +31,39 @@ export default function Component({ type }: RenderServicesProps) {
 			<Accordion
 				type="single"
 				collapsible={false}
-				defaultValue="item-0"
+				defaultValue={isAccordionOpen}
 			>
-				{services.map((value: Service, index: number) => (
-					<AccordionItem
-						key={index}
-						value={`item-${index}`}
-						className="py-5"
-					>
-						<AccordionTrigger className="capitalize outline-none hover:no-underline">
-							{value.title}
-						</AccordionTrigger>
-						<AccordionContent className="text-lg lowercase">
-							{value.description}
-						</AccordionContent>
-					</AccordionItem>
-				))}
+				{services.map((value: Service, index: number) => {
+					const openAccordionIndex = `item-${index}`;
+
+					return (
+						<AccordionItem
+							key={index}
+							value={openAccordionIndex}
+							className="py-5"
+						>
+							<AccordionTrigger
+								className={cn(
+									"capitalize outline-none hover:no-underline",
+									isAccordionOpen === openAccordionIndex
+										? "text-muted/90"
+										: "text-muted-foreground",
+								)}
+								onClick={() => setIsAccordionOpen(openAccordionIndex)}
+							>
+								{value.title}
+							</AccordionTrigger>
+							<AccordionContent className="text-lg">
+								<span
+									className="text-muted"
+									dangerouslySetInnerHTML={{
+										__html: value.description,
+									}}
+								/>
+							</AccordionContent>
+						</AccordionItem>
+					);
+				})}
 			</Accordion>
 		</React.Fragment>
 	);

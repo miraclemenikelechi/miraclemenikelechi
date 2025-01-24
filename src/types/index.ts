@@ -5,3 +5,8 @@ export interface Service {
 	title: string;
 	description: string;
 }
+
+export interface iLink {
+	title: string;
+	href: string;
+}
