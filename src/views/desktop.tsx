@@ -29,8 +29,10 @@ export default function Page() {
 			scrollTrigger: {
 				trigger: frontendRef.current,
 				start: "top center",
-				end: "bottom 60%",
+				end: "bottom 45%",
 				toggleActions: "play reverse play reverse",
+
+				markers: true,
 			},
 		});
 		frontendTimeline.fromTo(
@@ -62,7 +64,7 @@ export default function Page() {
 				},
 				{
 					text: "back",
-					ease: "power2.out",
+					ease: "power2.inOut",
 				},
 			)
 			.fromTo(
@@ -75,7 +77,7 @@ export default function Page() {
 					opacity: 1,
 					y: 0,
 					duration: 0.25,
-					ease: "power3.out",
+					ease: "power2.inOut",
 				},
 				"-=0.25",
 			);

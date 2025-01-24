@@ -33,7 +33,7 @@ export default function AWOLOWO() {
 	}, []);
 
 	const fallback = (
-		<div className="flex items-center justify-center h-screen text-xs font-space-mono">
+		<div className="flex items-center justify-center h-screen text-xs font-space-mono text-pink--100">
 			Hello WOrld ;)
 		</div>
 	);

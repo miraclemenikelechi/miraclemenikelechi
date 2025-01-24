@@ -8,8 +8,13 @@ export default function Component() {
 				"col-start-1 col-end-3",
 			)}
 		>
-			<aside className="text-xl">How could I be of service to you? :)</aside>
-			<aside className="text-lg">Let's work together</aside>
+			{/* <aside className="text-xl">How could I be of service to you? :)</aside>
+			<aside className="text-lg">Let's work together</aside> */}
+
+			<aside className="text-lg">hi, i'm miracle emenike kelechi </aside>
+			<aside>
+                [X] [Linkedin] [GitHub]
+            </aside>
 		</header>
 	);
 }

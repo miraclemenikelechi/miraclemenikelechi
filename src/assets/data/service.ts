@@ -1,4 +1,18 @@
-import { CSS3, HTML5, JAVASCRIPT, LESS, NEXT, REACT, SCSS, TAILWIND } from "../icons";
+import {
+    CSS3,
+    DOCKER,
+    EXPRESS,
+    FASTAPI,
+    HTML5,
+    JAVASCRIPT,
+    LESS,
+    NEXT,
+    NODE,
+    PYTHON,
+    REACT,
+    SCSS,
+    TAILWIND,
+} from "../icons";
 
 export const SERVICES = {
 	FRONTEND: [
@@ -138,7 +152,7 @@ export const SERVICES = {
 	],
 
 	ICONS: {
+		BACKEND: [PYTHON, FASTAPI, DOCKER, NODE, EXPRESS],
 		FRONTEND: [HTML5, CSS3, SCSS, TAILWIND, JAVASCRIPT, LESS, REACT, NEXT],
-		BACKEND: [],
 	},
 };
