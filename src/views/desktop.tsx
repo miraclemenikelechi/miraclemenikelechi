@@ -31,8 +31,6 @@ export default function Page() {
 				start: "top center",
 				end: "bottom 45%",
 				toggleActions: "play reverse play reverse",
-
-				markers: true,
 			},
 		});
 		frontendTimeline.fromTo(
